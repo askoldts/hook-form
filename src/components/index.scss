@@ -1,0 +1,80 @@
+input {
+  width: 100%;
+  max-width: 315px;
+  height: 48px;
+  padding: 10px 10px 10px 20px;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(21, 29, 81, 0.2);
+
+  transition: border-color .3s, color .3s;
+  outline: none;
+
+  &:focus {
+    border: 1px solid rgba(21, 29, 81, 1)
+  }
+
+}
+
+input[aria-invalid='true'] {
+  -webkit-text-fill-color: rgba(237, 95, 89, 1) !important;
+  color: rgba(237, 95, 89, 1);
+  border: 1px solid rgba(237, 95, 89, 1);
+}
+input[aria-invalid='success'] {
+  -webkit-text-fill-color: rgba(39, 178, 116, 1) !important;
+  color: rgba(39, 178, 116, 1) !important;
+  border: 1px solid rgba(39, 178, 116, 1);
+}
+
+
+.input-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 40px 0 20px 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.innerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 311px;
+  width: 100%;
+
+  &-title {
+    font-size: 28px;
+    font-weight: 700;
+  }
+}
+
+.passwordValidationStatus {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px 40px 20px;
+
+  .success {
+    color: rgba(39, 178, 116, 1);
+  }
+
+  .error {
+    color: rgba(255, 128, 128, 1);
+  }
+
+  .default {
+    color: #000000;
+  }
+
+}
+
+
+
